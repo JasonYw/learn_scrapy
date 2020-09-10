@@ -1,0 +1,4 @@
+//h3/text() 标题
+//div[@class="clearfix"]/div[@class="course-card-container"]//span[2]/text() 人数
+//div[@class="clearfix"]/div[@class="course-card-container"]//span[@class="price"]/text() 价格
+//div[@class="clearfix"]/div[@class="course-card-container"]//p/text() 简介

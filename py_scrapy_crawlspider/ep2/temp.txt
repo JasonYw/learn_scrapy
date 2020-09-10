@@ -1,0 +1,25 @@
+http://wz.sun0769.com/political/index/politicsNewest?id=1&page=1
+
+href="/political/index/politicsNewest?id=1&page=2" 
+LinkExtract(r'id=1&page=\d+') follow =true
+
+
+
+href="/political/politics/index?id=447607"  
+LinkExtract(r'politics/index?id=\d+')  follow =true
+
+
+
+def parse_dg(self,response):
+    item -----------
+
+
+    //div[@class="mr-three"]/p/text()   标题
+    //div[@class="mr-three"]//pre/text()   内容
+    //div[@class="mr-three"]//span[@class="fl"][3]/text()   编号
+    //div[@class="mr-three"]//span[@class="fl"][1]/text()  发布日期
+    //div[@class="mr-three"]//div[@class="skillbar-title"]/span/text()  待处理日期
+    //div[@class="mr-three"]//span[@class="fl"][2]/text()  状态
+
+
+     

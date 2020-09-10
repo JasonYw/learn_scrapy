@@ -1,0 +1,46 @@
+2020-03-23 23:08:16 [scrapy.utils.log] INFO: Scrapy 2.0.1 started (bot: ep7)
+2020-03-23 23:08:16 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.10.0, Python 3.6.8 (tags/v3.6.8:3c6b436a57, Dec 24 2018, 00:16:47) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.18362-SP0
+2020-03-23 23:08:16 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2020-03-23 23:08:16 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'ep7',
+ 'LOG_FILE': 'ep7.log',
+ 'NEWSPIDER_MODULE': 'ep7.spiders',
+ 'SPIDER_MODULES': ['ep7.spiders']}
+2020-03-23 23:08:16 [scrapy.extensions.telnet] INFO: Telnet Password: 6177224aba211e0c
+2020-03-23 23:08:16 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-03-23 23:08:17 [twisted] CRITICAL: Unhandled error in Deferred:
+2020-03-23 23:08:17 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\program files\python36\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "c:\program files\python36\lib\site-packages\scrapy\crawler.py", line 89, in crawl
+    self.engine = self._create_engine()
+  File "c:\program files\python36\lib\site-packages\scrapy\crawler.py", line 103, in _create_engine
+    return ExecutionEngine(self, lambda _: self.stop())
+  File "c:\program files\python36\lib\site-packages\scrapy\core\engine.py", line 69, in __init__
+    self.downloader = downloader_cls(crawler)
+  File "c:\program files\python36\lib\site-packages\scrapy\core\downloader\__init__.py", line 83, in __init__
+    self.middleware = DownloaderMiddlewareManager.from_crawler(crawler)
+  File "c:\program files\python36\lib\site-packages\scrapy\middleware.py", line 53, in from_crawler
+    return cls.from_settings(crawler.settings, crawler)
+  File "c:\program files\python36\lib\site-packages\scrapy\middleware.py", line 34, in from_settings
+    mwcls = load_object(clspath)
+  File "c:\program files\python36\lib\site-packages\scrapy\utils\misc.py", line 50, in load_object
+    mod = import_module(module)
+  File "c:\program files\python36\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "D:\py\py_scrapy_spider\ep7\ep7\middlewares.py", line 33
+    request.meta['proxy'] ='http://'+proxy_one['IP_PORT']
+                                                        ^
+IndentationError: unindent does not match any outer indentation level
