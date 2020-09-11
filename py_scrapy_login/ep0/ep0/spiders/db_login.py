@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
-from ep0 import settings
+
 
 
 class DbLoginSpider(scrapy.Spider):
@@ -16,7 +16,7 @@ class DbLoginSpider(scrapy.Spider):
         }
         cookies =response.headers.getlist('Set-Cookie')
         cookie =','.join(i.decode('utf-8') for i in cookies)
-        # print('cookie =%s'%(cookie))
+        print('cookie =%s'%(cookie))
         self.headers['Cookie'] =cookie
         print('headers: ',self.headers)
         data ={'name':'15801367721','password':'forstudy','remember': 'false','ck':''}
@@ -39,13 +39,14 @@ class DbLoginSpider(scrapy.Spider):
         
     def parse_page(self,response):
         cookies =response.headers.getlist('Set-Cookie')
+        print('response.headers = ',response.headers)
         print("cookie = ",cookies)
-        # print(response.body)
         self.headers['Cookie'] =','.join(i.decode('utf-8') for i in cookies)
         print('headers: ',self.headers)
         yield scrapy.Request('https://www.douban.com/',headers=self.headers,callback=self.parse_loginpage)
 
     def parse_loginpage(self,response):
         pass
+        #print(response.body.decode('utf-8'))
        
     
